@@ -1,9 +1,11 @@
-// Debe generar un script que permita ingresar por pantalla un arreglo de números enteros. 
-// Para terminar de ingresar valores, debe ingresar el numero -1. 
-// Debe validar que cada valor ingresado corresponda a un numero entero (vea el método isInteger())
-// Se debe ordenar los valores del array. (revisar método sort())
-// Luego de ordenarlo, debe elegir cualquiera de las opciones de bucles para recorrerlo y 
-// mostrar cada numero (función alert()).
+/**
+ *  Debe generar un script que permita ingresar por pantalla un arreglo de números enteros. 
+ * Para terminar de ingresar valores, debe ingresar el numero -1. 
+ * Debe validar que cada valor ingresado corresponda a un numero entero (vea el método isInteger())
+ * Se debe ordenar los valores del array. (revisar método sort())
+ * Luego de ordenarlo, debe elegir cualquiera de las opciones de bucles para recorrerlo y 
+ * mostrar cada numero (función alert()).
+ */
 
 num = 0;
 arr = [];
@@ -18,4 +20,4 @@ while(num != -1){
         console.log("Ingrese un numero entero")
     }
     console.log(arr[i]);
-}
+};
