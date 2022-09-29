@@ -5,12 +5,12 @@
  */
  var dia = ["lun","mar","mier","jue","vier","sab","dom"];
  var fecha = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
- var mm_lluvia = [0.2,0,0.2,0,17,3.1,5,8,9,0.2,0.2,0,17,3.1,5,0.2,0,0.2,0,17,3.1];
+ var arr = [0.2,0,0.2,0,17,3.1,5,8,9,0.2,0.2,0,17,3.1,5,0.2,0,0.2,0,17,3.1];
 
-var j = 3;
-var k = 0;
-var x = 0;
-var suma_mm = [];
+var j = 3;//Dia 
+var k = 0;//mm_lluvia
+var x = 0;//prom_semanal
+suma_mm = 0;
 var prom_semanal = [];
 for(var i = 0; i < fecha.length; i++) {
 
@@ -27,8 +27,8 @@ for(var i = 0; i < fecha.length; i++) {
     };
 
  
-    suma_mm = suma_mm[i] + mm_lluvia[k];
-    // console.log("suma hasta el dia: ", suma_mm);
+    suma_mm = suma_mm + mm_lluvia[k];
+    console.log("suma hasta el dia: ", suma_mm);
     // suma_mm = suma_mm + float(mm_lluvia[k]);
     for(x = 0; fecha>0;fecha<6,x++){
         prom_semanal[0] = prom_semanal[x] + mm_lluvia[k];
@@ -36,10 +36,10 @@ for(var i = 0; i < fecha.length; i++) {
     for(x = 6; fecha>0;fecha<6,x++){
         prom_semanal[1] = prom_semanal[x] + mm_lluvia[k];
     };
-    for(x = 0; fecha>0;fecha<6,x++){
+    for(x = 0; fecha>=7;fecha<13,x++){
         prom_semanal[2] = prom_semanal[x] + mm_lluvia[k];
     };
-    for(x = 0; fecha>0;fecha<6,x++){
+    for(x = 0; fecha>14;fecha<20,x++){
         prom_semanal[3] = prom_semanal[x] + mm_lluvia[k];
     };
     for(x = 0; fecha>0;fecha<6,x++){
