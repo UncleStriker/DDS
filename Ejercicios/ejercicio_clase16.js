@@ -1,32 +1,46 @@
-//debe crear 10 inputs de tipo numerico(con id)
-//debe crear un boton
-//el boton debe gatillar una funcion de rellene todos los inputs con 
+//debe crear 10 inputs de tipo numerico (con id)
+//debe crear un botón
+//el boton debe gatillar una funcion que rellene todos los input con 
 //valores random entre 1 y 100
-//debe crear un label que indique el mayor numero generado
+//debe crear un label que indique el mayor número generado.
 
-function generarID(){
-    todosLosInputs.forEach(input => {
-        input.value = Math.ceil(Math.random() * 100);
-    })
-}
+var body = document.body
+var todosInputs = []
+var mayor = 0
 
-var todosLosInputs = []
-
-var body =  document.body
-var todosLosInputs = document
-for(i=0; i<10; i++) {
-    input =  document.createElement("input")
+for(i = 0 ; i <= 9; i++){
+    input = document.createElement('input')
     input.id = `myInput${i}`
-    br = document.createElement("br")
+    todosInputs.push(input)
+    br = document.createElement('br')
     body.appendChild(input)
     body.appendChild(br)
+    
 }
 
-button = document.createElement('button')
-id = document.createElement('id')
-button.innerText = 'Generar ID'
-button.onclick = () => generarID()
-br = document.createElement("br")
+boton = document.createElement('button')
+boton.innerText = "Rellenar Inputs"
+boton.onclick = () => rellenar()
+br = document.createElement('br')
 body.appendChild(br)
-body.appendChild(button)
+body.appendChild(boton)
+br = document.createElement('br')
+body.appendChild(br)
+label = document.createElement('label')
+label.innerText = "El numero mayor es: "
+body.appendChild(label)
+rellenar = () => {
+    if(mayor != 0){
+        mayor = 0
+    }
+    label.innerText = "El numero mayor es: "
+    todosInputs.forEach(input => {
+        valor =Math.ceil(Math.random()*100)
+        if (valor > mayor){
+            mayor = valor
+        }
+        input.value =  valor     
+    });
+    label.innerText += mayor;
 
+}

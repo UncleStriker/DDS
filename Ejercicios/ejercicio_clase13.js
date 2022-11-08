@@ -2,6 +2,7 @@ var body = document.body
 var tipoDato = ['Nombre: ', 'Apellido paterno: ', 'Apellido materno: ', 'Rut:', 'Fono: '];
 label = document.createElement('label')
 label.innerHTML = '<b>Input de texto</b>'
+
 body.appendChild(label)
 br = document.createElement('br')
 body.appendChild(br)

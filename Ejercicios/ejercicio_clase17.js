@@ -8,7 +8,7 @@ dibujar = () =>{
     for( i = 0; i <9; i++){
         var input = document.createElement('input')
         input.id = `input${i}`
-        input.style.width = "30"
+        input.style.width = "100"
         selector = Math.ceil(Math.random()*10)
         var equises = 0
         if(selector%2 == 0 && equises<5){
