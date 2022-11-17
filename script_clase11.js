@@ -1,6 +1,6 @@
 var body = document.body
 var contenedor = document.createElement('div')
-contenedor.classList.add("container"
+contenedor.classList.add("container")
 
 for(i=1; i<10; i++) {
     fila = document.createElement('div')

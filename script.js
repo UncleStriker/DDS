@@ -5,7 +5,7 @@
 
 // alert(variableString.telefono)
 
-"residuo"
+// "residuo"
 // var a = 10
 
 // var b = 3
@@ -25,5 +25,10 @@
 // var c = -15
 // console.log(-c)
 
-"exponencial"
+// "exponencial"
 // console.log(a ** b)
+
+body = document.body
+var inputNumber = document.createElement('inputNumber')
+inputNumber.innerHTML = "Ingrese numero..."
+body.appendChild(inputNumber)
