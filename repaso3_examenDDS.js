@@ -4,149 +4,108 @@ function Equipo(nombre, ciudad, ganados, empatados, perdidos){
     this.partidosGanados = ganados;
     this.partidosEmpatados = empatados;
     this.partidosPerdidos = perdidos;
-    this.puntaje = (this.partidosGanados*3)+(this.partidosEmpatados)
+    // this.puntaje = (this.partidosGanados*3)+(this.partidosEmpatados)
 }
 
 equipos = []
-
-const enviarEquipo = (nombre, ciudad, ganados, empatados, perdidos) =>{
+nomEquipo = ''
+nomCiudad = ''
+var puntaje = 0
+const enviarEquipo = (nombre, ciudad, ganados, empatados, perdidos)=>{
     var nombre = document.getElementById('equipos').value
     var ciudad = document.getElementById('ciudades').value
     var ganados = document.getElementById('ganados').value
     var empatados = document.getElementById('empatados').value
     var perdidos = document.getElementById('perdidos').value
 
-    var table = document.createElement('table')
 
     equipos.push(
         new Equipo(nombre, ciudad, ganados, empatados, perdidos)
     )
-
-    // equipo = new Equipo(nombre, ciudad, ganados, empatados, perdidos)
-    // equipos.push(equipo)
-
-    // switch(parseInt(equipo)){
-
-    //     case 1:(
-    //         equipo.nombre = 'Wanderers'
-            
-    //     );
-    //     break;
-    //     case 1:(
-    //         equipo.nombre = 'Coquimbo'
-            
-    //     );
-    //     break;
-    //     case 1:(
-    //         equipo.nombre = 'Catolica'
-            
-    //     );
-    //     break;
-    //     case 1:(
-    //         equipo.nombre = 'Colo-Colo'
-            
-    //     );
-    //     break;
-    //     case 1:(
-    //         equipo.nombre = 'Barrabases'
-            
-    //     );
-    //     break;
-    //     case 1:(
-    //         equipo.nombre = 'Buenas Peras'
-            
-    //     );
-    //     break;
-    //     case 1:(
-    //         equipo.nombre = 'Everton'
-            
-    //     );
-    //     break;
-    //     case 1:(
-    //         equipo.nombre = 'Ñublense'
-            
-    //     );
-    //     break;
-    //     case 1:(
-    //         equipo.nombre = 'Deportes Naval'
-            
-    //     );
-    //     break;
-    //     case 1:(
-    //         equipo.nombre = 'Niupi'
-            
-    //     );
-    //     break;
-             
-
-    // }
-
-
-    var tr = document.createElement('tr')
-    var td = document.createElement('td')
-    td.innerHTML = equipo.nombre
+    
+    br = document.createElement('br')
+    table.appendChild(br)
+    tr = document.createElement('tr')  
+    td = document.createElement('td')
+    if(nombre == 1){
+        nomEquipo = 'Wanderers'
+    }
+    if(nombre == 2){
+        nomEquipo = 'Coquimbo'
+    }
+    if(nombre == 3){
+        nomEquipo = 'Católica'
+    }
+    if(nombre == 4){
+        nomEquipo = 'Colo-Colo'
+    }
+    if(nombre == 5){
+        nomEquipo = 'Barrabases'
+    }
+    if(nombre == 6){
+        nomEquipo = 'Buenas Peras'
+    }
+    if(nombre == 7){
+        nomEquipo = 'Everton'
+    }
+    if(nombre == 8){
+        nomEquipo = 'Ñublense'
+    }
+    if(nombre == 9){
+        nomEquipo = 'Deportes Naval'
+    }
+    if(nombre == 10){
+        nomEquipo = 'Niupi'
+    }
+    td.innerHTML = nomEquipo
     tr.appendChild(td)
     td = document.createElement('td')
-    td.innerHTML = equipo.ciudad
+    if(ciudad == 1){
+        nomCiudad = 'Valparaiso'
+    }
+    if(ciudad == 2){
+        nomCiudad = 'Coquimbo'
+    }
+    if(ciudad == 3){
+        nomCiudad = 'Santiago'
+    }
+    if(ciudad == 4){
+        nomCiudad = 'Frutillar'
+    }
+    if(ciudad == 5){
+        nomCiudad = 'Viña del mar'
+    }
+    if(ciudad == 6){
+        nomCiudad = 'Ñublense'
+    }
+    if(ciudad == 7){
+        nomCiudad = 'Tokio'
+    }
+    td.innerHTML = nomCiudad
+    tr.appendChild(td)
+
+    td = document.createElement('td')
+    td.innerHTML = parseInt(ganados)
     tr.appendChild(td)
     td = document.createElement('td')
-    td.innerHTML = equipo.ganados
+    td.innerHTML = parseInt(empatados)
     tr.appendChild(td)
     td = document.createElement('td')
-    td.innerHTML = equipo.empatados
+    td.innerHTML = parseInt(perdidos)
     tr.appendChild(td)
     td = document.createElement('td')
-    td.innerHTML = equipo.perdidos
+    puntaje = (parseInt(ganados * 3) + parseInt(empatados))
+    td.innerHTML = parseInt(puntaje)
     tr.appendChild(td)
 
     table.appendChild(tr)
-    body.appendChild(table)
-    
-    // switch(parseInt(equipo)){
-    //     case 1: arrWan.push(
-    //         new Equipo(nombre, ciudad, ganados, empatados, perdidos)
-    //     );
-    //     break;
-    //     case 2: arrCoq.push(
-    //         new Equipo(nombre, ciudad, ganados, empatados, perdidos)
-    //     );
-    //     break;
-    //     case 3: arrCato.push(
-    //         new Equipo(nombre, ciudad, ganados, empatados, perdidos)
-    //     );
-    //     break;
-    //     case 4: arrColo.push(
-    //         new Equipo(nombre, ciudad, ganados, empatados, perdidos)
-    //     );
-    //     break;
-    //     case 5: arrBarra.push(
-    //         new Equipo(nombre, ciudad, ganados, empatados, perdidos)
-    //     );
-    //     break;
-    //     case 6: arrPeras.push(
-    //         new Equipo(nombre, ciudad, ganados, empatados, perdidos)
-    //     );
-    //     break;
-    //     case 7: arrEve.push(
-    //         new Equipo(nombre, ciudad, ganados, empatados, perdidos)
-    //     );
-    //     break;
-    //     case 8: arrÑuble.push(
-    //         new Equipo(nombre, ciudad, ganados, empatados, perdidos)
-    //     );
-    //     break;
-    //     case 9: arrNav.push(
-    //         new Equipo(nombre, ciudad, ganados, empatados, perdidos)
-    //     );
-    //     break;
-    //     case 10: arrNiu.push(
-    //         new Equipo(nombre, ciudad, ganados, empatados, perdidos)
-    //     );
-    //     break;
-    // }
-    // agregarLinea(tabla)
-}
 
+    document.getElementById('equipos').value = ''
+    document.getElementById('ciudades').value = ''
+    document.getElementById('ganados').value = ''
+    document.getElementById('empatados').value = ''
+    document.getElementById('perdidos').value = ''
+}
 
 
 body = document.body 
@@ -154,13 +113,16 @@ body = document.body
 table = document.createElement('table')
 
 tr = document.createElement('tr')
-tr.style.border = '1px solid'
 br = document.createElement('br')
 tr.appendChild(br)
+
+//SELECT EQUIPO
 var selec_equipo = document.createElement('select')
 selec_equipo.id = 'equipos'
 selec_equipo.style.margin = '3px'
 tr.appendChild(selec_equipo)
+
+//OPTIONS DE SELECT EQUIPOS
 var opt1 = document.createElement('option')
 opt1.value = 1
 opt1.innerHTML = 'Santiago Wanderers'
@@ -204,11 +166,13 @@ selec_equipo.appendChild(opt10)
 tr.appendChild(selec_equipo)
 table.appendChild(tr)
 
+//SELECT CIUDADES
 var select_ciudad = document.createElement('select')
 select_ciudad.id = 'ciudades'
 select_ciudad.style.margin = '3px'
 tr.appendChild(select_ciudad)
 
+//OPTIONS DE SELECT CIUDADES
 var opt1 = document.createElement('option')
 opt1.value = 1
 opt1.innerHTML = 'Valparaiso'
@@ -238,31 +202,45 @@ opt7.value = 7
 opt7.innerHTML = 'Tokio'
 select_ciudad.appendChild(opt7)
 
+//INPUT DE PARTIDOS GANADOS
 input1 = document.createElement('input')
 input1.id = 'ganados'
 input1.placeholder = 'Partidos ganados'
 input1.style.margin = '2px'
 
+//INPUT DE PARTIDOS EMPATADOS
 input2 = document.createElement('input')
 input2.id = 'empatados'
 input2.placeholder = 'Partidos empatados'
 input2.style.margin = '2px'
 
+//IMPUTN DE PARTIDOS PERDIDOS
 input3 = document.createElement('input')
 input3.id = 'perdidos'
 input3.placeholder = 'Partidos Perdidos'
 input3.style.margin = '2px'
 
+//BOTON PARA GUARDAR DATOS DE EQUIPOS
 boton = document.createElement('button')
 boton.innerHTML = 'Enviar'
 boton.onclick = () => enviarEquipo()
 
+
+
+//MOSTRAR POR PANTALLA
+tr.appendChild(selec_equipo)
 tr.appendChild(select_ciudad)
 tr.appendChild(input1)
 tr.appendChild(input2)
 tr.appendChild(input3)
 tr.appendChild(boton)
 
-table.appendChild(tr)
+br = document.createElement('br')
+tr.appendChild(br)
 
+verResults = document.createElement('button')
+verResults.innerHTML = 'Ver resultados'
+tr.appendChild(verResults)
+
+table.appendChild(tr)
 body.appendChild(table)
